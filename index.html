@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#d7ed32">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="page-heading">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>GOOD THINGS ADD UP</span>
+      </header>
+
+      <section class="calculator" aria-label="Calculator">
+        <div class="display">
+          <div class="display-toolbar">
+            <span class="display-label">STANDARD</span>
+            <button class="copy-button" id="copy-result" type="button" aria-label="Copy result" title="Copy result">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="expression" id="expression" aria-label="Expression" aria-live="polite"></div>
+          <output class="result" id="result" aria-label="Result">0</output>
+          <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="keypad" aria-label="Calculator keypad">
+          <button class="key key-clear" type="button" data-action="clear" aria-label="Clear">C</button>
+          <button class="key key-utility" type="button" data-action="delete" aria-label="Delete last character">⌫</button>
+          <button class="key key-utility" type="button" data-value="(" aria-label="Open parenthesis">(</button>
+          <button class="key key-utility" type="button" data-value=")" aria-label="Close parenthesis">)</button>
+
+          <button class="key" type="button" data-value="7">7</button>
+          <button class="key" type="button" data-value="8">8</button>
+          <button class="key" type="button" data-value="9">9</button>
+          <button class="key key-operator" type="button" data-value="÷" aria-label="Divide">÷</button>
+
+          <button class="key" type="button" data-value="4">4</button>
+          <button class="key" type="button" data-value="5">5</button>
+          <button class="key" type="button" data-value="6">6</button>
+          <button class="key key-operator" type="button" data-value="×" aria-label="Multiply">×</button>
+
+          <button class="key" type="button" data-value="1">1</button>
+          <button class="key" type="button" data-value="2">2</button>
+          <button class="key" type="button" data-value="3">3</button>
+          <button class="key key-operator" type="button" data-value="-" aria-label="Subtract">−</button>
+
+          <button class="key key-operator" type="button" data-value="%" aria-label="Percent">%</button>
+          <button class="key key-zero" type="button" data-value="0">0</button>
+          <button class="key" type="button" data-value=".">.</button>
+          <button class="key key-operator" type="button" data-value="+" aria-label="Add">+</button>
+
+          <button class="key key-equals" type="button" data-action="equals" aria-label="Equals">=</button>
+        </div>
+
+        <section class="history" aria-labelledby="history-title">
+          <div class="history-heading">
+            <h2 id="history-title">Recent calculations</h2>
+            <button class="history-clear" id="clear-history" type="button">Clear</button>
+          </div>
+          <ol class="history-list" id="history-list">
+            <li class="history-empty">Your calculations will show up here.</li>
+          </ol>
+        </section>
+        <p class="keyboard-hint">Tip: use your keyboard · Enter to calculate · Esc to clear</p>
+      </section>
+
+      <footer class="page-footer">A little clarity goes a long way.</footer>
+    </main>
+  </body>
+</html>

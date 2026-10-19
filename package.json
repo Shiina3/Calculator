@@ -1,0 +1,21 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "~58.0.17"
+  },
+  "dependencies": {
+    "expo": "~58.0.14",
+    "expo-clipboard": "~58.0.3",
+    "expo-status-bar": "~58.0.3",
+    "react": "19.3.0",
+    "react-native": "0.88.0"
+  }
+}
